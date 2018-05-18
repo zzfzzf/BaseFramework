@@ -1,0 +1,29 @@
+image:
+    file:
+        upload:
+            dir: static/upload/
+logging:
+    file: /logs/server.log
+    level:
+        '*': DEBUG
+spring:
+    datasource:
+        driver-class-name: com.mysql.jdbc.Driver
+        initialSize: 5
+        maxActive: 20
+        maxWait: 60000
+        minIdle: 5
+        password: root
+        type: com.alibaba.druid.pool.DruidDataSource
+        url: jdbc:mysql://localhost/zero?useUnicode=true&characterEncoding=UTF-8&autoReconnect=true
+        username: root
+    jpa:
+        show-sql: true
+    redis:
+        host: 127.0.0.1
+        maxActive: 600
+        maxIdle: 300
+        maxWait: 1000
+        pass: ''
+        port: 6379.0
+        testOnBorrow: true
